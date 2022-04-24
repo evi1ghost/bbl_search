@@ -9,8 +9,10 @@ Use instruction for your OS:
 ### Set login attributes for MySQL:
 If you want to change default login attributes rename [.env.example](.env.example) to .env and set desired values.
 ### Run initializing scripts:
-`sudo ./init_mysql.sh`
-`./init_app.sh`
+```sh
+sudo ./init_mysql.sh
+./init_app.sh
+```
 ### Activate virtual environment:
 `source venv/bin/activate`
 ### Run the app:
