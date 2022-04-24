@@ -77,7 +77,7 @@ def bbl_search(bbl):
 
 @cli.command(name='area-range')
 def get_area_range():
-    """Return max and min areas of plots."""
+    """Show max and min areas of plots."""
     query = """
         SELECT
             MIN(p.shape_area) AS minimum_area,
