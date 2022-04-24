@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export $(cat .env | xargs)
-echo "Initialising MySQL server"
+echo "Initializing MySQL server"
 docker-compose -f mysql.yaml up -d
 echo "Waiting for the server to start. It can takes several minutes"
 while ! docker-compose -f mysql.yaml \

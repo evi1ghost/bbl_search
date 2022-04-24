@@ -26,7 +26,7 @@ def gpd_geographic_area(geodf):
 def fillna_by_overlay_area(df, districts_df):
     """
     Add ntacode column based on max intersection area.
-    
+
     Some of plots in the dataframe intersect with several districts.
     Function assign ntacode based on max intersection area.
     """

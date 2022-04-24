@@ -2,7 +2,7 @@
 
 from sqlalchemy import (Column, ForeignKey, Integer, MetaData, Table,
                         create_engine)
-from sqlalchemy.dialects.mysql import CHAR, DOUBLE, SMALLINT, VARCHAR
+from sqlalchemy.dialects.mysql import BOOLEAN, CHAR, DOUBLE, SMALLINT, VARCHAR
 
 engine = create_engine(
     'mysql+pymysql://user:user_pass@127.0.0.1/territory',
@@ -33,7 +33,8 @@ plots = Table(
         ForeignKey('districts.id', ondelete="CASCADE"),
         nullable=False
     ),
-    Column('shape_area', DOUBLE(10, 2), nullable=False)
+    Column('shape_area', DOUBLE(10, 2), nullable=False),
+    Column('is_deleted', BOOLEAN, nullable=False, server_default='0')
 )
 
 

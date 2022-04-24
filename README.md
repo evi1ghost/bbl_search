@@ -10,3 +10,4 @@ sudo ./init.sh
 `sh
 source venv/bin/activate
 `
+## ENV
