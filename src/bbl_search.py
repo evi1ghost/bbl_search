@@ -25,6 +25,9 @@ def exit_app_with_error(msg, exit_code):
 def get_data_from_db(query):
     with engine.connect() as conn:
         data = pd.read_sql(query, conn)
+    if data.empty:
+        click.echo('No suitable data.')
+        sys.exit(0)
     return data.to_string(index=False)
 
 
