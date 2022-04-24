@@ -18,7 +18,7 @@ def cli():
 
 
 def exit_app_with_error(msg, exit_code):
-    click.echo(msg)
+    click.echo(f'Error: {msg}')
     sys.exit(exit_code)
 
 
